@@ -95,7 +95,7 @@ aws lambda invoke --function-name my-bucket-check --payload '{}' output.txt
 
 --- 
 
-## ## Step 2: Implement Security Policy 2 and Testing the Lambda Function Under Different Security Scenario Case2: 
+## Step 2: Implement Security Policy 2 and Testing the Lambda Function Under Different Security Scenario Case2: 
 
 ```bash
 
