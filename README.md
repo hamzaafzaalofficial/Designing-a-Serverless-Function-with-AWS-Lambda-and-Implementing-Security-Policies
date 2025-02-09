@@ -24,7 +24,7 @@ def lambda_handler(event, context):
 
 
 zip myfirstfunction.zip myfirstfunction.py
-aws lambda create-function --function-name myfunction --runtime python3.9 --role arn:aws:iam::780621109903:role/MyLambdaRole --handler myfirstfunction.lambda_handler --zip-file fileb://myfirstfunction.zip
+aws lambda create-function --function-name myfunction --runtime python3.9 --role arn:aws:iam::780621779903:role/MyLambdaRole --handler myfirstfunction.lambda_handler --zip-file fileb://myfirstfunction.zip
 aws lambda invoke --function-name myfunction --payload '{}' output.txt
 cat output.txt
 ```
@@ -56,7 +56,7 @@ vi custom-lambda-policy.json
 
 
 aws iam create-policy --policy-name custom-lambda-policy --policy-document file://custom-lambda-policy.json
-aws iam attach-role-policy --role-name MyLambdaRole --policy-arn arn:aws:iam::780621109903:policy/custom-lambda-policy
+aws iam attach-role-policy --role-name MyLambdaRole --policy-arn arn:aws:iam::7805562059903:policy/custom-lambda-policy
 ```
 
 ---
@@ -89,7 +89,7 @@ def lambda_handler(event, context):
 
 
 zip bucketcheck.zip bucketcheck.py
-aws lambda create-function --function-name my-bucket-check --runtime python3.9 --role arn:aws:iam::780621109903:role/MyLambdaRole --handler bucketcheck.lambda_handler --zip-file fileb://bucketcheck.zip
+aws lambda create-function --function-name my-bucket-check --runtime python3.9 --role arn:aws:iam::7704441068603:role/MyLambdaRole --handler bucketcheck.lambda_handler --zip-file fileb://bucketcheck.zip
 aws lambda invoke --function-name my-bucket-check --payload '{}' output.txt
 ```
 
@@ -111,7 +111,7 @@ def lambda_handler(event, context):
 
 
 zip basicServerlessFunction.zip basicServerlessFunction.py
-aws lambda create-function --function-name basicServerlessFunction --runtime python3.9 --role arn:aws:iam::780621109903:role/MyLambdaRole --handler basicServerlessFunction.lambda_handler --zip-file fileb://basicServerlessFunction.zip
+aws lambda create-function --function-name basicServerlessFunction --runtime python3.9 --role arn:aws:iam::696921109903:role/MyLambdaRole --handler basicServerlessFunction.lambda_handler --zip-file fileb://basicServerlessFunction.zip
 
 aws kms create-key --description "Lambda Env Encryption"
 
